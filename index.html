@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   
+   <style media="screen">
+	#mapid{height: 520px;}
+	img{
+		height: 200px;
+		width: 200px;}
+	</style>
+   <meta charset="utf-8">
+   <title>WEBGIS</title>
+   </head>
+   <body>
+   <h1>Letak Mall Di Kota Depok</h1>
+   <h3>Ahmad Karomi Al Hamidy, H1D020069</h3>
+	<div id="mapid"></div>
+	
+	<script type="text/javascript">
+	var map = L.map('mapid').setView([-6.4025, 106.7942], 12);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoicGluZ2dhbmd0YXJ1bmEiLCJhIjoiY2t4OWx1ZDM4MHgwczJwcnlkNmZlam03OSJ9.NV0wyOSuc2obO7enh_sisg'
+}).addTo(map);
+
+		var marker = L.marker([-6.3731,106.8347]).addTo(map).bindPopup('<b>Margo City</b><br><center><img src="gambar/margo.jpg" />');
+		var marker = L.marker([-6.376182,106.7450218]).addTo(map).bindPopup('<b>The Park Sawangan</b><br><center><img src="gambar/the-park-sawangan.jpg" />');
+		var marker = L.marker([-6.380437,106.8447049]).addTo(map).bindPopup('<b>Pesona Square Mall</b><br><center><img src="gambar/pesona.jpg" />');
+		var marker = L.marker([-6.3725749,106.8294766]).addTo(map).bindPopup('<b>Depok Town Square</b><br><center><img src="gambar/detos.jpeg" />');
+		var marker = L.marker([-6.32453,106.7823213]).addTo(map).bindPopup('<b>Mall Cinere</b><br><center><img src="gambar/mal-cinere.jpg" />');
+		var marker = L.marker([-6.3869257,106.8225977]).addTo(map).bindPopup('<b>DMall</b><br><center><img src="gambar/dmall.jpg" />');
+		var marker = L.marker([-6.3953106,106.7906712]).addTo(map).bindPopup('<b>Depok Town Center</b><br><center><img src="gambar/dtc.jpg" />');
+		var marker = L.marker([-6.3924909,106.8213401]).addTo(map).bindPopup('<b>ITC Depok</b><br><center><img src="gambar/itc.jpg" />');
+		var marker = L.marker([-6.3170419,106.7805716]).addTo(map).bindPopup('<b>Cinere Bellevue Mall</b><br><center><img src="gambar/cinere-bellevue-mall.jpg" />');
+		var marker = L.marker([-6.35808,106.8572013]).addTo(map).bindPopup('<b>Cimanggis Square</b><br><center><img src="gambar/Cimanggis_Square.jpg" />');
+	</script>
